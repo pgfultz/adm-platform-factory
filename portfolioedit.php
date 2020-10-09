@@ -9,14 +9,7 @@
 
     <main role="main">
 
-      <section class="jumbotron text-center">
-        <div class="container">
-          <h1 class="jumbotron-heading">Portfolio</h1>
-          <a href="#" class="btn btn-primary my-2">Adicionar</a>
-        </div>
-      </section>
-
-      <div class="album py-5 bg-light">
+      <div class="album py-3 bg-light">
         <div class="container">
 
           <div class="row">
@@ -28,9 +21,29 @@
                 $ln = $sql->fetchObject();
             ?>
             <div class="a-editar">
-                <h4>Capa</h4>
+                <h3>Editando - <?php echo $ln->name; ?></h3>
+                <form action="sys/editprojectdata.php?id=<?php echo $ln->id; ?>" id="form_dados_projeto" name="form_dados_projeto" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="input_nome">Nome</label>
+                        <input type="text" class="form-control" id="input_nome" name="input_nome" value="<?php echo $ln->name; ?>" placeholder="Nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="input_tecnologias">Tecnologias <small class="text-muted">(Separado por virgula)</small></label>
+                        <input type="text" class="form-control" id="input_tecnologias" name="input_tecnologias" value="<?php echo $ln->technologies; ?>" placeholder="Nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="input_descricao">Descrição</label>
+                        <textarea class="form-control" placeholder="Descrição" name="input_descricao" id="input_descricao" rows="3"><?php echo $ln->descr; ?></textarea>
+                    </div>
+                    <input type="submit" value="Salvar" class="btn btn-primary">
+                </form>
+                <hr />
+                <h4 class="mt-5">Capa</h4>
                 <div class="capa-projeto" style="background-image: url('<?php echo BASE."/uploads/".$ln->logo; ?>')">
-                    <button class="btn btn-primary btn-mudar-capa">Trocar</button>
+                    <form action="sys/addcapa.php?id_project=<?php echo $id; ?>&photo_name=<?php echo $ln->logo; ?>" id="form_add_capa" method="post" enctype="multipart/form-data">
+                        <input type="file" name="input_capa" id="input_capa" class="input_capa" accept="image/x-png,image/gif,image/jpeg" />
+                        <label for="input_capa" class="btn btn-primary btn-mudar-capa">Trocar</label>
+                    </form>
                 </div>
                 
                 <br><br>

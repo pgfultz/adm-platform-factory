@@ -6,6 +6,10 @@ input[type="file"]{
     display: none;
 }
 
+#form_dados_projeto{
+    width: 600px;
+}
+
 .starter-template {
     padding: 3rem 1.5rem;
     text-align: center;
@@ -18,7 +22,7 @@ input[type="file"]{
 
 .a-editar{
     width: 100%;
-    border: 1px solid red;
+    border: 0px solid red;
     display: flex;
     flex-direction: column;
 }
