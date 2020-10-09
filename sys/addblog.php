@@ -22,8 +22,8 @@ if(isset($titulo) AND isset($descricao)){
                 // Upload file to server
                 if(move_uploaded_file($_FILES['input_capa_blog']['tmp_name'], $target_file)){ //efetua o uploa
                     // Insert image file name into database
-                    $sql = $pdo->prepare("INSERT INTO `blog` SET `capa` = ?, `autor` = ?, `titulo` = ?, `descricao` = ?");
-                    if($sql->execute(array($novo_nome,$_SESSION['logged_name'],$titulo,$descricao))){
+                    $sql = $pdo->prepare("INSERT INTO `blog` SET `capa` = ?, `autor` = ?, `titulo` = ?, `descricao` = ?, `categoria` = ?");
+                    if($sql->execute(array($novo_nome,$_SESSION['logged_name'],$titulo,$descricao,$categoria))){
                         $last_id = $pdo->lastInsertId();
                         header("location: ../blog.php");
                     }else{

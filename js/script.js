@@ -61,3 +61,28 @@ function deleteProject(id){
         });
     }
 }
+
+function excluirArtigo(id){
+    let r = confirm("Tem certeza que deseja apagar esse projeto?");
+
+    if(r){
+        
+        $.ajax({
+            type: 'POST',
+            url: 'sys/deleteartigo.php',
+            data: { id: id},
+            dataType: 'JSON',
+            success: function(res){
+                if(res.success){
+                    alert('Artigo excluido com sucesso. A página vai reiniciar!');
+                    window.location.reload();
+                }else{
+                    alert(res.message);
+                }
+            },
+            error: function(){
+                alert('Ocorreu um erro de requisição!');
+            }
+        });
+    }
+}
