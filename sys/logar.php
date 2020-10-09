@@ -10,7 +10,7 @@
 
         if($sql->rowCount() == 1){
             $dados = $sql->fetchObject();
-            
+            session_start();
             $_SESSION['logged_id'] = $dados->id;
             $_SESSION['logged_name'] = $dados->name;
 
