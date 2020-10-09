@@ -35,7 +35,7 @@
                         <label for="input_descricao">Descrição</label>
                         <textarea class="form-control" placeholder="Descrição" name="input_descricao" id="input_descricao" rows="3"><?php echo $ln->descr; ?></textarea>
                     </div>
-                    <input type="submit" value="Salvar" class="btn btn-primary">
+                    <input type="submit" value="Alterar dados" class="btn btn-primary">
                 </form>
                 <hr />
                 <h4 class="mt-5">Capa</h4>
