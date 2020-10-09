@@ -28,12 +28,22 @@ function deleteProject(id){
     let r = confirm("Tem certeza que deseja apagar esse projeto?");
 
     if(r){
+        
         $.ajax({
-            method: 'POST',
-            url: 'deleteProject.php',
+            type: 'POST',
+            url: 'sys/deleteproject.php',
             data: { id: id},
+            dataType: 'JSON',
             success: function(res){
-                
+                if(res.success){
+                    alert('Projeto excluido com sucesso. A página vai reiniciar!');
+                    window.location.reload();
+                }else{
+                    alert(res.message);
+                }
+            },
+            error: function(){
+                alert('Ocorreu um erro de requisição!');
             }
         });
     }
