@@ -4,6 +4,12 @@
 
         $id = $_GET['id'];
         $id_project = $_GET['id_project'];
+        $photo_name = $_GET['photo_name'];
+        $photo_path = '../uploads/'.$photo_name;
+
+        if(file_exists($photo_path)){
+            unlink($photo_path);
+        }
 
         $sql = $pdo->prepare('DELETE FROM `projects_photos` WHERE `id` = ?');
         if($sql->execute(array($id))){

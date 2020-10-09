@@ -43,7 +43,7 @@
                         ?>
                             <div class="foto" style="background-image: url('<?php echo BASE."/uploads/".$fotos->photo; ?>')">
                                 <div class="f-escuro"></div>
-                                <a href="sys/deletefoto.php?id=<?php echo $fotos->id; ?>&id_project=<?php echo $id; ?>">
+                                <a href="sys/deletefoto.php?id=<?php echo $fotos->id; ?>&id_project=<?php echo $id; ?>&photo_name=<?php echo $fotos->photo; ?>">
                                     <div class="btn-apagar-foto">X</div>
                                 </a>
                             </div>
