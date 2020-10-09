@@ -3,8 +3,8 @@
     <main role="main" class="container">
 
       <div class="starter-template">
-        <h1>Template Bootstrap inicial</h1>
-        <p class="lead">Use este documento como uma maneira de iniciar um novo projeto, rapidamente.<br>Tudo oquê você começa é com este texto e um documento HTML (quase vazio).</p>
+        <h1>Platform Factory</h1>
+        <p class="lead">Página de construção.<br>Em breve.</p>
       </div>
 
     </main><!-- /.container -->
