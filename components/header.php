@@ -37,6 +37,9 @@
           <li class="nav-item active">
             <a class="nav-link" href="<?php echo BASE; ?>/portfolio.php">Portifolio</a>
           </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="<?php echo BASE; ?>/blog.php">Blog</a>
+          </li>
         </ul>
 
         <ul class="navbar-nav ml-auto">

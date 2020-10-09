@@ -24,6 +24,19 @@ $('#input_nova_capa').change(function(e){
     }
 });
 
+$('#input_capa_blog').change(function(e){
+    if(e.target.value.length){
+        let file = this.files[0];
+        let reader = new FileReader();
+        reader.onloadend = function(){
+            $('.capa-blog').css('background-image', 'url('+reader.result+')');
+        }
+        if(file){
+            reader.readAsDataURL(file);
+        } 
+    }
+});
+
 function deleteProject(id){
     let r = confirm("Tem certeza que deseja apagar esse projeto?");
 

@@ -10,6 +10,10 @@ input[type="file"]{
     width: 600px;
 }
 
+#form_blog{
+    width: 100%;
+}
+
 .starter-template {
     padding: 3rem 1.5rem;
     text-align: center;
@@ -30,6 +34,19 @@ input[type="file"]{
 .a-editar .capa-projeto, .a-editar .capa-novo-projeto{
     width: 300px;
     height: 240px;
+    background-color: #CCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.capa-blog{
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
     background-color: #CCC;
     display: flex;
     align-items: center;
