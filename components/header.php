@@ -35,7 +35,7 @@
             <a class="nav-link" href="<?php echo BASE; ?>/agendamentos.php">Agendamentos</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="<?php echo BASE; ?>/portfolio.php">Portifolio</a>
+            <a class="nav-link" href="<?php echo BASE; ?>/portfolio.php">Portfolio</a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="<?php echo BASE; ?>/blog.php">Blog</a>
